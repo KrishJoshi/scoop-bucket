@@ -1,0 +1,27 @@
+{
+    "version": "0.1.0",
+    "description": "Plain-English triggers for your screen, camera and mic, powered by decision models",
+    "homepage": "https://krishj.com/ifseen/",
+    "license": "MIT",
+    "notes": "Standalone build: screen, camera, mic and MQTT included. For the free offline 'local' provider (torch), use: pipx install \"ifseen[all,local]\"",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/KrishJoshi/ifseen/releases/download/v0.1.0/ifseen-0.1.0-windows-x86_64.zip",
+            "hash": "807df608afa1a32321bd594ab99d5efe568216f30976d70133e6b26607f50595"
+        }
+    },
+    "bin": "ifseen.exe",
+    "checkver": {
+        "github": "https://github.com/KrishJoshi/ifseen"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/KrishJoshi/ifseen/releases/download/v$version/ifseen-$version-windows-x86_64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS"
+        }
+    }
+}
